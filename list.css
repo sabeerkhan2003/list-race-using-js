@@ -37,8 +37,26 @@ select{
     flex-direction: row;
     justify-content: center;
     gap: 40%;
-    
+    position: sticky;
+    top: 0;
+    padding: 20px;
+    border: 1px solid black;
+    margin: 0;
+    background-color: #FFFFFF;
+    z-index: 1; 
 }
+@keyframes name{
+    0%{
+        top:0;
+        padding-left: 0%;
+
+    }
+    20%{
+        top:100;
+        padding-left: 30px;
+    }
+}
+
 .nav3 ul{
     display: flex;
     flex-direction: row;
@@ -46,11 +64,18 @@ select{
     justify-content: space-between;
     gap: 30px;
 }
-.nav3 li{
+.nav3 ul li a{
     color: #859098;
     font-size: 14px;
-    font-family: "poppins";
-    gap: 30px;
+    cursor: pointer;
+   text-decoration: none;
+    animation-name: nav;
+    
+}
+.nav3 ul li a:hover,.nav3 ul li a.active{
+    color: #FF545A;
+}
+.nav3 ul li a:nth-child(odd){
     
 }
 .logo1{
@@ -65,18 +90,18 @@ select{
     font-family: "poppins",sans-serif;
     
 }
-#page2{
+#page1{
     background-image: url(./banner.jpg);
     background-size: 100% 105%;
-   background-position: right;
+    background-position: right;
     opacity: 0.8;
     background-repeat: no-repeat;
     background-blend-mode: darken;
-    height: 110vh;
+    min-height: 100vh;
     background-position: left;
-    
-
+    margin-top: 0;
 }
+
 .black{
     background-color: black;
     width: 100%;
@@ -94,7 +119,7 @@ select{
     margin: 0px 200px;
     text-transform: uppercase;
     position: absolute;
-    top:240px
+    top:35%;
     
 }
 #para2{
@@ -103,32 +128,63 @@ select{
     text-align: center;
     font-family: "poppins",sans-serif;
     position: absolute;
-    top: 380px;
-    left: 300px;
+    top: 60%;
+    padding-left: 22%;
+    padding-right: 22%;
     
 
 }
 .box{
-    background-color: #FFFFFF;
-    border: 1px solid black;
+    
+    /* background-color: #FFFFFF; */
     position: absolute;
-    top: 500px;
-    left: 230px;
-    padding-left: 10px;
+    top: 80%;
+    left: 20%;
+    padding-left:10px;
     font-family: "poppins",sans-serif;
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: px;
     align-items: center;
-    width: 600px;
-    height: 60px;
+    width: 44%;
+    
+    
+    
+    
     
 }
+.box1{
+    background-color: #FFFFFF;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    
+   
+}
+.box1 table tr{
+    height:50px;
+    
+    
+}
+.box2 table tr{
+    height:50px;
+}
+
+.box2{
+    background-color: #FFFFFF;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    border: ;
+}
+
 .box input{
     border-style: none;
     outline: none;
-    border-color: ;
-    padding: 0px;
+    background-color: #FFFFFF;
+    padding: 0px 8px;
    
     
 }
@@ -136,14 +192,20 @@ select{
     font-size: 18px;
     color: #343A3F;
     padding-left: 10px;
+    background-color: #FFFFFF;
 }
-.box button{
+.box_button{
     border: 1px solid transparent;
     background-color: #FF545A;
     color: #FFFFFF;
-    padding: 20px 60px;
+    padding: 15px 60px;
     margin-left: 60px;
-    height: 60px;
+    height: 60px;position: absolute;
+    bottom: 12.5%;
+    right: 20%;
+    height: 50px;
+    text-align: center;
+
 }
 .boxes ul li{
     height: 120px;
@@ -164,16 +226,19 @@ select{
     text-align: center;
     list-style: none;
     align-items: center;
+    flex-wrap: wrap;
+   
+    
 }
 .boxes ul li a{
     font-size: 16px;
     font-family: "poppins",sans-serif;
     color: #343A3F;
 }
-.boxes ul li a p{
+.boxes ul li  p{
     font-size:14px;
     font-family: "poppins",sans-serif;
-    color:rgb(118,127,134);
+    color:#767F86;
     
 } 
 .boxes ul li i{
@@ -197,3 +262,187 @@ top: 120vh;
 
 
 }
+#page2{
+    min-height: 100vh;
+    
+    
+}
+.cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 120px;
+    
+    
+    
+}
+.cont h2{
+    font-size: 24px;
+    color: #505866;
+    font-family: "poppins",sans-serif;
+    
+}
+.cont p{
+    font-size: 16px;
+    color: #767F86;
+    font-family: "poppins",sans-serif;
+    
+}
+.cards{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+    padding-top: 120px;
+    flex-wrap: wrap;
+    
+}
+.c1,.c2,.c3{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    height: 250px;
+    width: 200px;
+    border: 1px solid black;
+    text-align: center;
+    padding: 40px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border: none;
+}
+.c1 button,.c2 button,.c3 button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    margin-left: 50px;
+    padding: 10px 5px;
+    color: #767F86;
+    font-family: "poppins",sans-serif;
+    background-color: #FFFFFF;
+    border:none;
+    border: 1px solid #767F86;
+    
+    
+}
+.c1 a,.c2 a,.c3 a{
+    font-size: 18px;
+    font-family: "poppins",sans-serif;
+    color: #343A3F;
+    font-weight: rmal;
+}
+.c1 p,.c2 p,.c3 p{
+    font-size: 14px;
+    font-family: "poppins",sans-serif;
+    color: #767F86;
+    
+}
+.explore{
+    height: 100vh;
+    background-color: #F8FAFB;
+}
+.titles{
+    
+    
+}
+.titles h2{
+    color: #505866;
+    font-size: 24px;
+    font-family: "poppins",sans-serif;
+    text-align: center;
+    padding-top: 100px;
+}
+.titles p{
+    color: #767f86;
+    font-size: 16px;
+    font-family: "poppins",sans-serif;
+    text-align: center;
+    padding-top: 20px;
+    
+}
+#page3,#page4,#page5,#page6{
+    min-height: 100vh;
+}
+
+
+
+
+
+
+
+
+/* 768px 1240px for tablet */
+@media screen and (max-width: 425px) {
+    *{
+        overflow-x: hidden;
+    }
+    .nav3{
+        display: none;
+    }
+    .nav-org img{
+        display: inline;
+    }
+  
+    #page1 h2,#page1 p{
+        margin-right: 30px;
+    }
+    #para1{
+        
+        margin-left: 5%;
+        
+    }
+    #para2{
+        line-height: 25px;
+        margin-top: 30%;
+       
+        
+    }
+    .box{
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+         width: 50%; 
+         height: 15%;
+        margin-top: 25%;
+        align-items: center; 
+        
+    }
+    .box1{
+       width: 99%;
+       padding: 5px;
+       
+
+       
+       
+       
+    }
+    .box2{
+        width: 95%;
+        padding: 8px;
+        margin-top: 20px; 
+    }
+    .box_button{
+        display: none;
+
+    }
+    .cont h2{
+        margin-top: 100%;
+    }
+    .c1 a,.c2 a,.c3 a{
+        height: 35px;  
+    }
+    .c1 p,.c2 p,.c3 p{
+        height: 100px;
+    }
+    .c1 button,.c2 button,.c3 button{
+        height: 45px;
+        
+    }
+}
+@media screen and (max-width:1440px){
+    .nav-org img{
+        display: none;
+    }
+}
+    
