@@ -1,5 +1,5 @@
 var sections = document.querySelectorAll("section");
-var navlinks = document.querySelectorAll(".nav-org nav3 ul li a");
+var navlinks = document.querySelectorAll(".nav3 ul li a");
 
 window.onscroll = () => {
     var top = window.scrollY;
@@ -14,12 +14,10 @@ window.onscroll = () => {
                 link.classList.remove("active");
             });
 
-            // Selecting the specific navigation link using template literals
-            var activeLink = document.querySelector(`.nav-org nav3 ul li a[href*="${id}"]`);
+            var activeLink = document.querySelector(`.nav3 ul li a[href*="#${id}"]`);
             if (activeLink) {
                 activeLink.classList.add("active");
             }
-            
         }
     });
-}
+};

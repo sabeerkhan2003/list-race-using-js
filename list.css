@@ -146,30 +146,42 @@ select{
     flex-direction: row;
     gap: px;
     align-items: center;
-    width: 44%;
+    width: 46%;
+    justify-content: center;
     
     
     
     
     
+}
+.box1 img{
+    /* position: relative;
+    left: 10; */
 }
 .box1{
     background-color: #FFFFFF;
-    padding-left: 10px;
+    padding-left: 0px;
     display: flex;
     align-items: center;
-    width: 50%;
+    width:58%;
+    height: 55px;
+    padding-left: 10px;
+    padding-right: 10px;
+    
     
    
 }
-.box1 table tr{
-    height:50px;
+.box input{
+    border-style: none;
+    outline: none;
+    background-color: #FFFFFF;
+    padding: 0px 4px;
+    width: 100%;
     
+   
     
 }
-.box2 table tr{
-    height:50px;
-}
+
 
 .box2{
     background-color: #FFFFFF;
@@ -178,21 +190,19 @@ select{
     display: flex;
     align-items: center;
     border: ;
+    height: 55px;
+    width: 65%;
 }
 
-.box input{
-    border-style: none;
-    outline: none;
-    background-color: #FFFFFF;
-    padding: 0px 8px;
-   
-    
-}
+
 .box label{
     font-size: 18px;
-    color: #343A3F;
-    padding-left: 10px;
+    /* color: #343A3F;
+    color: rgb(66,71,76); */
+    color: rgb(66,71,76);
+    padding-left: 0px;
     background-color: #FFFFFF;
+    width: 30%;
 }
 .box_button{
     border: 1px solid transparent;
@@ -201,9 +211,9 @@ select{
     padding: 15px 60px;
     margin-left: 60px;
     height: 60px;position: absolute;
-    bottom: 12.5%;
-    right: 20%;
-    height: 50px;
+    bottom: 2%;
+    left: 95%;
+    height: 55px;
     text-align: center;
 
 }
@@ -394,7 +404,7 @@ top: 120vh;
     }
     #para2{
         line-height: 25px;
-        margin-top: 30%;
+        margin-top: 25%;
        
         
     }
@@ -409,13 +419,8 @@ top: 120vh;
         
     }
     .box1{
-       width: 99%;
-       padding: 5px;
-       
-
-       
-       
-       
+       width: 100%;
+       padding: 5px;   
     }
     .box2{
         width: 95%;
